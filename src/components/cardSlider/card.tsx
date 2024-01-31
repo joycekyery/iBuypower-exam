@@ -6,7 +6,7 @@ interface CardProps {}
 
 const Card: React.FC<CardProps> = ({}) => {
   return (
-    <div className=" h-max w-[398px] shadow-[rgba(0,0,0,0.16)_0px_0px_20px] rounded-[15px] bg-white ">
+    <div className=" w-[330px] shadow-[rgba(0,0,0,0.16)_0px_0px_20px] rounded-[15px] bg-white ">
       <div className=" p-5  flex flex-col items-start justify-start">
         <div className=" border-2 border-[##929292] p-1 rounded-xl w-max">
           <p className="text-left font-bold text-[10px] leading-tight tracking-normal text-[#929292]">
@@ -17,6 +17,7 @@ const Card: React.FC<CardProps> = ({}) => {
           <Image
             src="https://content.ibuypower.com/cdn-cgi/image/width=256,format=auto,quality=75/https://content.ibuypower.com/Images/Components/27296/gaming-pc-01-Y60-001-Main-400-.png?v=b1b30b635f23fbb1776cfe0cdf7ec8343cafe604"
             alt="pc"
+            priority={true}
             width={230}
             height={230}
           />

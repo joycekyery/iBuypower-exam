@@ -1,4 +1,5 @@
-import Card from "@/components/card";
+import Card from "@/components/cardSlider/card";
+import Slider from "@/components/cardSlider/slider";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <p className="text-center font-bold text-xl leading-tight pb-12">
         Prebuilt & Custom
       </p>
-      <Card />
+      <Slider />
     </main>
   );
 }

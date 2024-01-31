@@ -1,0 +1,6 @@
+.swiper {
+    padding: 16px;
+    padding-right: 0px;
+    display:flex;
+    flex-direction: column-reverse;
+  }
