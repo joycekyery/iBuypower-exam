@@ -21,7 +21,11 @@ const Slider: React.FC<SliderProps> = ({
   const swiperElRef = useRef<SwiperRef>(null);
 
   return (
-    <div className="flex flex-col w-full justify-center ">
+    <div
+      className={`flex flex-col ${
+        isMobile ? "w-full" : "w-[1430px]"
+      } justify-center `}
+    >
       {!isMobile && hasButton && (
         <div className="flex flex-row w-full justify-end ">
           <button
@@ -74,7 +78,9 @@ const Slider: React.FC<SliderProps> = ({
           </button>
         </div>
       )}
-      <div className={`flex w-[1430px] ${isMobile && "w-full"} self-center`}>
+      <div
+        className={`flex  ${isMobile ? "w-full " : "w-[1430px]"} self-center`}
+      >
         <Swiper
           ref={swiperElRef}
           slidesPerView={isMobile ? 1 : 4}

@@ -29,8 +29,8 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className={`w-[320px] shadow-[rgba(0,0,0,0.16)_0px_0px_20px] rounded-[15px] bg-white  ${
-        isMobile && "w-auto"
+      className={` shadow-[rgba(0,0,0,0.16)_0px_0px_20px] rounded-[15px] bg-white  ${
+        isMobile ? "w-auto mr-[16px]" : "w-[320px]"
       }`}
     >
       <div className=" p-5  flex flex-col items-start justify-start">
