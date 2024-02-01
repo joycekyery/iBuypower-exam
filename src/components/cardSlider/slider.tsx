@@ -23,7 +23,7 @@ const Slider: React.FC<SliderProps> = ({
   return (
     <div
       className={`flex flex-col ${
-        isMobile ? "w-full" : "w-[1430px]"
+        isMobile ? "w-full" : "w-[1430px] "
       } justify-center `}
     >
       {!isMobile && hasButton && (
@@ -79,7 +79,9 @@ const Slider: React.FC<SliderProps> = ({
         </div>
       )}
       <div
-        className={`flex  ${isMobile ? "w-full " : "w-[1430px]"} self-center`}
+        className={`flex  ${
+          isMobile ? "w-full " : "w-[1430px] sm:w-full md:w-full"
+        } self-center`}
       >
         <Swiper
           ref={swiperElRef}
