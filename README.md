@@ -1,5 +1,5 @@
 ## Demo
-查看實際展示:[Demo](https://i-buypower-exam-gat4d12mv-yungchingl-unimelbedu.vercel.app/)
+查看實際展示:[Demo](https://i-buypower-exam.vercel.app/)
 
 ### 如何運行
 本專案使用yarn管理和下載
