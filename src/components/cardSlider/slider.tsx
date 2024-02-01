@@ -1,23 +1,28 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { Children, ReactNode, useEffect, useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide, SwiperClass, SwiperRef } from "swiper/react";
-import { Pagination, FreeMode } from "swiper/modules";
-import Card from "./card";
+import { Swiper, SwiperRef } from "swiper/react";
 import "swiper/css";
-import "swiper/css/free-mode";
 import "./styles.css";
-interface SliderProps {}
+interface SliderProps {
+  isMobile: boolean;
+  cards: ReactNode;
+  hasButton: boolean;
+}
 
-const Slider: React.FC<SliderProps> = ({}) => {
+const Slider: React.FC<SliderProps> = ({
+  cards,
+  isMobile = false,
+  hasButton = false,
+}) => {
   const [isBeginning, setisBeginning] = useState<boolean | undefined>(false);
   const [isEnd, setisEnd] = useState<boolean | undefined>(false);
 
   const swiperElRef = useRef<SwiperRef>(null);
 
   return (
-    <div className="relative flex w-[1430px]">
-      <div className="fex flex-col w-full">
+    <div className="flex flex-col w-full justify-center ">
+      {!isMobile && hasButton && (
         <div className="flex flex-row w-full justify-end ">
           <button
             onClick={() => {
@@ -68,15 +73,21 @@ const Slider: React.FC<SliderProps> = ({}) => {
             </svg>
           </button>
         </div>
+      )}
+      <div className={`flex w-[1430px] ${isMobile && "w-full"} self-center`}>
         <Swiper
           ref={swiperElRef}
-          spaceBetween={2}
-          slidesPerView={4}
-          freeMode={true}
+          slidesPerView={isMobile ? 1 : 4}
+          spaceBetween={20}
+          centeredSlides={isMobile ? true : false}
+          initialSlide={0}
+          onInit={() => {
+            setisBeginning(swiperElRef.current?.swiper.isBeginning);
+            setisEnd(swiperElRef.current?.swiper.isEnd);
+          }}
           pagination={{
             clickable: true,
           }}
-          modules={[FreeMode]}
           className="mySlider"
           loop={false}
           onTouchMove={() => {
@@ -84,13 +95,7 @@ const Slider: React.FC<SliderProps> = ({}) => {
             setisEnd(swiperElRef.current?.swiper.isEnd);
           }}
         >
-          {Array.from({ length: 10 }, () => 0).map((val, k) => {
-            return (
-              <SwiperSlide key={k}>
-                <Card />
-              </SwiperSlide>
-            );
-          })}
+          {cards}
         </Swiper>
       </div>
     </div>

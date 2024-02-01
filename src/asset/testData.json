@@ -12,12 +12,12 @@
         "originalPrice":2499,
         "discountPrice":2199
     },
-    "type":"Prebuilt",
+    "pcType":"Prebuilt",
     "delivery":"Delivery By Friday, Jul 7",
     "instock":true
 },{
-    "productName":"RDY Y60 001",
-    "image":"https://content.ibuypower.com/cdn-cgi/image/width=256,format=auto,quality=75/https://content.ibuypower.com/Images/Components/27296/gaming-pc-01-Y60-001-Main-400-.png?v=b1b30b635f23fbb1776cfe0cdf7ec8343cafe604",
+    "productName":"Intel Gaming PC Configurator 4",
+    "image":"https://content.ibuypower.com/cdn-cgi/image/width=256,format=auto,quality=75/https://content.ibuypower.com/Images/Components/25755/gaming-pc-01-H7-Flow-Black-main-400.png?v=925182ed1623e6489d44de850076ff43b5d60e53",
     "spec":{
         "operatingSystem":"Windows 11 Home",
         "processor":"Intel® Core™ i9-13900KF CPU",
@@ -26,10 +26,10 @@
         "Memory":"32GB DDR5-6000MHz RGB RAM"
     },
     "price":{
-        "originalPrice":1299,
-        "discountPrice":1469
+        "originalPrice":1499,
+        "discountPrice":1069
     },
-    "type":"Prebuilt",
+    "pcType":"Custom",
     "delivery":"Delivery By Friday, Jul 7",
     "instock":false
 },{
@@ -43,13 +43,31 @@
         "Memory":"32GB DDR5-6000MHz RGB RAM"
     },
     "price":{
-        "originalPrice":1699,
-        "discountPrice":1999
+        "originalPrice":1999,
+        "discountPrice":1599
     },
-    "type":"Prebuilt",
+    "pcType":"Custom",
     "delivery":"Estimate Ship By 07/18/2023",
     "instock":true
 },{
+    "productName":"Intel Core 14th Gen Ultimate Gaming Daily Deal",
+    "image":"https://content.ibuypower.com/cdn-cgi/image/width=256,format=auto,quality=75/https://content.ibuypower.com/Images/Components/27369/gaming-pc-01-North001-main-KM7-400-.png?v=dfec9515cdb568b596858c7b1cc5bea20f2b0da3",
+    "spec":{
+        "operatingSystem":"Windows 11 Home",
+        "processor":"Intel® Core™ i9-13900KF CPU",
+        "videoCard":"NVIDIA GeForce RTX 4080 SUPER - 16GB",
+        "Storage":"2TB M.2 NVMe SSD",
+        "Memory":"32GB DDR5-6000MHz RGB RAM"
+    },
+    "price":{
+        "originalPrice":2499,
+        "discountPrice":2199
+    },
+    "pcType":"Prebuilt",
+    "delivery":"Estimate Ship By 07/18/2023",
+    "instock":true
+},
+{
     "productName":"RDY Y60 001",
     "image":"https://content.ibuypower.com/cdn-cgi/image/width=256,format=auto,quality=75/https://content.ibuypower.com/Images/Components/27296/gaming-pc-01-Y60-001-Main-400-.png?v=b1b30b635f23fbb1776cfe0cdf7ec8343cafe604",
     "spec":{
@@ -63,7 +81,58 @@
         "originalPrice":2499,
         "discountPrice":2199
     },
-    "type":"Prebuilt",
+    "pcType":"Custom",
+    "delivery":"Delivery By Friday, Jul 7",
+    "instock":true
+},{
+    "productName":"Intel Gaming PC Configurator 4",
+    "image":"https://content.ibuypower.com/cdn-cgi/image/width=256,format=auto,quality=75/https://content.ibuypower.com/Images/Components/25755/gaming-pc-01-H7-Flow-Black-main-400.png?v=925182ed1623e6489d44de850076ff43b5d60e53",
+    "spec":{
+        "operatingSystem":"Windows 11 Home",
+        "processor":"Intel® Core™ i9-13900KF CPU",
+        "videoCard":"GeForce RTX 4070 Ti - 12GB",
+        "Storage":"2TB M.2 NVMe SSD",
+        "Memory":"32GB DDR5-6000MHz RGB RAM"
+    },
+    "price":{
+        "originalPrice":1499,
+        "discountPrice":1069
+    },
+    "pcType":"Custom",
+    "delivery":"Delivery By Friday, Jul 7",
+    "instock":false
+},{
+    "productName":"RDY Y60 001",
+    "image":"https://content.ibuypower.com/cdn-cgi/image/width=256,format=auto,quality=75/https://content.ibuypower.com/Images/Components/27296/gaming-pc-01-Y60-001-Main-400-.png?v=b1b30b635f23fbb1776cfe0cdf7ec8343cafe604",
+    "spec":{
+        "operatingSystem":"Windows 11 Home",
+        "processor":"Intel® Core™ i9-13900KF CPU",
+        "videoCard":"GeForce RTX 4070 Ti - 12GB",
+        "Storage":"2TB M.2 NVMe SSD",
+        "Memory":"32GB DDR5-6000MHz RGB RAM"
+    },
+    "price":{
+        "originalPrice":1999,
+        "discountPrice":1699
+    },
+    "pcType":"Prebuilt",
+    "delivery":"Estimate Ship By 07/18/2023",
+    "instock":true
+},{
+    "productName":"Intel Core 14th Gen Ultimate Gaming Daily Deal",
+    "image":"https://content.ibuypower.com/cdn-cgi/image/width=256,format=auto,quality=75/https://content.ibuypower.com/Images/Components/27369/gaming-pc-01-North001-main-KM7-400-.png?v=dfec9515cdb568b596858c7b1cc5bea20f2b0da3",
+    "spec":{
+        "operatingSystem":"Windows 11 Home",
+        "processor":"Intel® Core™ i9-13900KF CPU",
+        "videoCard":"NVIDIA GeForce RTX 4080 SUPER - 16GB",
+        "Storage":"2TB M.2 NVMe SSD",
+        "Memory":"32GB DDR5-6000MHz RGB RAM"
+    },
+    "price":{
+        "originalPrice":2499,
+        "discountPrice":2199
+    },
+    "pcType":"Prebuilt",
     "delivery":"Estimate Ship By 07/18/2023",
     "instock":true
 }

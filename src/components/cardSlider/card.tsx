@@ -2,37 +2,63 @@
 
 import Image from "next/image";
 import affirmIcon from "@/asset/icon-affirm.svg";
-interface CardProps {}
+interface CardProps {
+  isMobile: boolean;
+  pcType: string;
+  productName: string;
+  delivery: string;
+  buyButtonText: string;
+  spec: Array<string>;
+  originalPrice: number;
+  discountPrice: number;
+  affirmPrice: number;
+  pcImage: string;
+}
 
-const Card: React.FC<CardProps> = ({}) => {
+const Card: React.FC<CardProps> = ({
+  isMobile = false,
+  pcType = "pcType",
+  productName = "productName",
+  delivery = "delivery",
+  buyButtonText = "buyButtonText",
+  spec = ["spec"],
+  originalPrice = 0,
+  discountPrice = 0,
+  affirmPrice = 0,
+  pcImage = "",
+}) => {
   return (
-    <div className=" w-[330px] shadow-[rgba(0,0,0,0.16)_0px_0px_20px] rounded-[15px] bg-white ">
+    <div
+      className={`w-[320px] shadow-[rgba(0,0,0,0.16)_0px_0px_20px] rounded-[15px] bg-white  ${
+        isMobile && "w-auto"
+      }`}
+    >
       <div className=" p-5  flex flex-col items-start justify-start">
         <div className=" border-2 border-[##929292] p-1 rounded-xl w-max">
           <p className="text-left font-bold text-[10px] leading-tight tracking-normal text-[#929292]">
-            Prebuilt PC
+            {pcType}
           </p>
         </div>
         <div className="flex w-full justify-center">
           <Image
-            src="https://content.ibuypower.com/cdn-cgi/image/width=256,format=auto,quality=75/https://content.ibuypower.com/Images/Components/27296/gaming-pc-01-Y60-001-Main-400-.png?v=b1b30b635f23fbb1776cfe0cdf7ec8343cafe604"
+            src={pcImage}
             alt="pc"
             priority={true}
             width={230}
             height={230}
           />
         </div>
-        <p className="text-left font-bold text-lg leading-tight tracking-normal text-black pb-8">
-          Creator RDY Y40BG201
+        <p className="text-left font-bold text-md leading-tight tracking-normal min-h-[48px] text-black">
+          {productName}
         </p>
         <ul className="flex flex-col items-start gap-1">
-          {Array.from({ length: 5 }, () => 0).map((val, k) => {
+          {spec.map((val, k) => {
             return (
               <li
                 key={k}
                 className="list-none whitespace-normal text-start text-xs xl:text-sm"
               >
-                Windows 11 Pro
+                {val}
               </li>
             );
           })}
@@ -41,21 +67,28 @@ const Card: React.FC<CardProps> = ({}) => {
       <div className=" bg-[#F2F6FA] p-5 pt-2">
         <div className=" bg-[#FF1B1B] p-1 rounded-xl w-max">
           <p className="text-left text-xs leading-tight tracking-normal text-white px-1">
-            SAVE $200
+            SAVE ${(originalPrice - discountPrice).toLocaleString()}
           </p>
         </div>
         <div className="flex flex-row justify-start items-end">
           <p className="text-left font-bold text-3xl leading-10 tracking-normal text-black pr-2">
-            $1,799
+            ${discountPrice.toLocaleString()}
           </p>
           <p className="text-left line-through font-normal text-base leading-6 tracking-normal text-[#929292]">
-            $1,799
+            ${originalPrice.toLocaleString()}
           </p>
         </div>
         <div className="flex flex-row justify-start items-center">
           <p className="text-left font-normal text-xs leading-5 tracking-normal">
             Starting at
-            <span className="text-[#004CFF]">&nbsp;$172.07/mo&nbsp;</span>
+            <span className="text-[#004CFF]">
+              &nbsp;$
+              {affirmPrice.toLocaleString("en-US", {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              })}
+              /mo&nbsp;
+            </span>
             with
           </p>
           <Image alt="affirmIcon" src={affirmIcon} height={24} />
@@ -66,11 +99,11 @@ const Card: React.FC<CardProps> = ({}) => {
               Free Shipping
             </p>
             <p className="text-left font-normal text-xs  tracking-normal">
-              Delivery By Friday, Jul 7
+              {delivery}
             </p>
           </div>
           <button className="border border-solid border-[#FF1B1B] text-[#FF1B1B] hover:!bg-[#FF1B1B] hover:text-gray-50 hover:border-[#FF1B1B] rounded-full py-[0.5rem] px-5 ">
-            Buy Now
+            {buyButtonText}
           </button>
         </div>
       </div>
